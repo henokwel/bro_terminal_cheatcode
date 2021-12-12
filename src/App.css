@@ -1,38 +1,84 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  min-width: 24vw;
+  max-width: 30vw;
+  background: rgb(199, 195, 195);
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background: rgb(253, 253, 206);
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+}
+/*# sourceMappingURL=App.css.map */
+
+
+button {
+  width:-moz-available  ;
+  
+  height: 70px;
+  font-weight: bold;
+  background: black;
+  color: white;
+  border: none;
+  margin-top: 15%;
+  margin-bottom: 15%;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.controll_Card{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 10px;
+  padding: 5px;
+  background: white;
+  height: max-content;
+}
+
+.controll_Card_controller{
+  display: flex;
+}
+
+.controll_Card h3{
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+}
+
+.controll_Card_controller li{
+  font-size: 18px;
+  list-style: none;
+  margin: 2px;
+  padding: 3px;
+
+}
+
+.controll_Card_controller li:nth-child(1){
+  background: green;
+}
+.controll_Card_controller li:nth-child(2){
+  background: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.controll_Card_controller li:nth-child(3){
+  background: rgb(214, 42, 42);
 }

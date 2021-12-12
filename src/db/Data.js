@@ -1,4 +1,10 @@
-export const data = {
+      const Data = {
+    "100":[
+        {
+            id: 199,
+            key: [31, 16, 85]
+        }
+    ],
     "200": [
         {
             id: 200,
@@ -1275,3 +1281,6 @@ export const data = {
     ]
     
 }
+
+
+export default Data;

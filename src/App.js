@@ -1,11 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import Data from './db/Data';
+// import data  from './data';
 
 
 // https://mui.com/ ==> for UI
 
 
 function App() {
+
+  const [currentId, setCurrentId] = useState(100)
 
   // useEffect(() => {
   //   window.addEventListener('online', () => {
@@ -23,12 +27,56 @@ function App() {
   // }, []);
 
 
+  // handle filter button
+
+  const handleFilterBtn = (id) => {
+
+    // check if its a new id 
+
+    // if(currentId === id) return
+
+    // change displaylist to match current id
+
+    // setCurrentID(id)
+
+
+  }
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
+      <aside>
 
-        PWA_alex
-      </header>
+        <button>
+          100
+        </button>
+        <button>
+          200
+        </button>
+        <button>
+          300
+        </button>
+        <button>
+          400
+        </button>
+        <button>
+          500
+        </button>
+        <button>
+          600
+        </button>
+        <button>
+          700
+        </button>
+
+      </aside>
+
+      <main>
+
+        
+
+      </main>
     </div>
   );
 }

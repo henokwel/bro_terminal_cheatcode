@@ -1,4 +1,4 @@
-export const data = {
+      const Data = {
     "100":[
         {
             id: 199,
@@ -1281,3 +1281,6 @@ export const data = {
     ]
     
 }
+
+
+export default Data;

@@ -45,10 +45,11 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  /* margin: 4px 2px; */
+  margin-top: 4px ;
   cursor: pointer;
   filter: drop-shadow(0px 2px 3px rgba(169, 166, 166, 0.27));
   border-top: 3px solid white;
+  border-radius: 5px;
 }
 
 .controll_Card{
@@ -73,7 +74,8 @@ button {
 }
 
 .controll_Card_controller li{
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: bold;
   list-style: none;
   margin: 2px;
   padding: 3px;
@@ -81,7 +83,9 @@ button {
 }
 
 .controll_Card_controller li:nth-child(1){
-  background: green;
+  background: #075F10;
+  color: white;
+
 }
 .controll_Card_controller li:nth-child(2){
   background: black;
@@ -89,5 +93,7 @@ button {
 }
 
 .controll_Card_controller li:nth-child(3){
-  background: rgb(214, 42, 42);
+  background: #A30101;
+  color: white;
+
 }

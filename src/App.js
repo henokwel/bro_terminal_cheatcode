@@ -31,13 +31,16 @@ function App() {
 
   const handleFilterBtn = (id) => {
 
+
+    console.log(id);
+
     // check if its a new id 
 
-    // if(currentId === id) return
+    if (currentId === id) return
 
     // change displaylist to match current id
 
-    // setCurrentID(id)
+    setCurrentId(id)
 
 
   }
@@ -50,25 +53,39 @@ function App() {
       <aside>
 
         <button onClick={() => handleFilterBtn(100)}>
-          100
+          <h2>
+            100
+          </h2>
         </button>
         <button onClick={() => handleFilterBtn(200)}>
-          200
+          <h2>
+            200
+          </h2>
         </button>
         <button onClick={() => handleFilterBtn(300)}>
-          300
+          <h2>
+            300
+          </h2>
         </button>
         <button onClick={() => handleFilterBtn(400)}>
-          400
+          <h2>
+            400
+          </h2>
         </button>
         <button onClick={() => handleFilterBtn(500)}>
-          500
+          <h2>
+            500
+          </h2>
         </button>
         <button onClick={() => handleFilterBtn(600)}>
-          600
+          <h2>
+            600
+          </h2>
         </button>
         <button onClick={() => handleFilterBtn(700)}>
-          700
+          <h2>
+            700
+          </h2>
         </button>
 
       </aside>

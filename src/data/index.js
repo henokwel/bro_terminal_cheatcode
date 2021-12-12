@@ -48,26 +48,18 @@ export const data = {
             id: 211,
             key: [1, 99, 50]
         },
-
         {
             id: 212,
             key: [1, 99, 50]
         },
-
-
         {
             id: 213,
             key: [1, 99, 50]
         },
-
-
         {
             id: 214,
             key: [1, 99, 50]
         },
-
-
-
         {
             id: 215,
             key: [45, 97, 14]
@@ -76,12 +68,10 @@ export const data = {
             id: 216,
             key: [45, 97, 14]
         },
-
         {
             id: 217,
             key: [45, 97, 14]
         },
-
         {
             id: 218,
             key: [71, 10, 28]
@@ -94,17 +84,14 @@ export const data = {
             id: 220,
             key: [71, 10, 28]
         },
-
         {
             id: 221,
             key: [67, 7, 18]
         },
-
         {
             id: 222,
             key: [67, 7, 18]
         },
-
         {
             id: 223,
             key: [22, 68, 13]
@@ -113,12 +100,10 @@ export const data = {
             id: 224,
             key: [22, 68, 13]
         },
-
         {
             id: 225,
             key: [22, 68, 13]
         },
-
         {
             id: 226,
             key: [87, 42, 11]
@@ -127,7 +112,6 @@ export const data = {
             id: 227,
             key: [87, 42, 11]
         },
-
         {
             id: 227,
             key: [87, 42, 11]
@@ -164,7 +148,6 @@ export const data = {
             id: 235,
             key: [33, 8, 25]
         },
-
         {
             id: 236,
             key: [77, 2, 5]
@@ -173,7 +156,6 @@ export const data = {
             id: 237,
             key: [77, 2, 5]
         },
-
         {
             id: 237,
             key: [77, 2, 5]
@@ -186,7 +168,6 @@ export const data = {
             id: 239,
             key: [77, 2, 5]
         },
-
         {
             id: 240,
             key: [14, 3, 54]
@@ -203,7 +184,6 @@ export const data = {
             id: 243,
             key: [14, 3, 54]
         },
-
         {
             id: 244,
             key: [87, 39, 10]  // Green , Black , Red

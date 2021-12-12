@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+// import ControllCard from './components/ControllCard';
 import Data from './db/Data';
 // import data  from './data';
 
@@ -31,18 +32,10 @@ function App() {
 
   const handleFilterBtn = (id) => {
 
-
-    console.log(id);
-
     // check if its a new id 
-
     if (currentId === id) return
-
     // change displaylist to match current id
-
     setCurrentId(id)
-
-
   }
 
   // Data["200"].map(item => console.log(item))
@@ -93,13 +86,15 @@ function App() {
       <main>
 
         {
-          Data[currentId].map(item => {
+          Data[currentId].map((item, index) => {
             const { id, key } = item
 
-            return <div className='controll_Card'>
+            // return <ControllCard id={id}  key={id + 1} keys={key}/>
+            return <div className='controll_Card' key={index}>
               <h3>{id}</h3>
               <div className='controll_Card_controller'>
-                {key.map(controller => <li>{`${controller < 10 ? `0` + controller : controller}`}</li>)}
+                {/* {key.map(controll => <MiniControllerCard item={controll} id={id} />)} */}
+                {key.map((controller, index) => <li key={index}>{`${controller < 10 ? `0` + controller : controller}`}</li>)}
               </div>
             </div>
           }
@@ -116,5 +111,33 @@ function App() {
 
 // Modal
 // https://mui.com/components/modal/#main-content
+
+
+
+// function ControllCard({ id, keys }) {
+//   // console.log('Kye ===>>' , key);
+
+//   return (
+//     <div className='controll_Card'>
+//       <h3>{id}</h3>
+//       <MiniControllerCard item={keys} id={id} />
+//       {/* <div className='controll_Card_controller'>
+//               {key.map(controller => <li>{`${controller < 10 ? `0` + controller : controller}`}</li>)}
+//           </div> */}
+//     </div>
+//   )
+// }
+
+
+// function MiniControllerCard({ item, id }) {
+//   console.log(item);
+
+//   return (
+//     <div className='controll_Card_controller' key={id}>
+//       {item.map(controller => <li >{`${controller < 10 ? `0` + controller : controller}`}</li>)}
+//     </div>
+//   )
+// }
+
 
 export default App;

@@ -1,9 +1,9 @@
-import React, {  useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
- import Data from './db/Data';
- 
+import Data from './db/Data';
 
- 
+
+
 
 function App() {
 
@@ -103,7 +103,7 @@ function App() {
   );
 }
 
- 
+
 
 
 // function ControllCard({ id, keys }) {

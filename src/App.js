@@ -1,12 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import './App.css';
-// import ControllCard from './components/ControllCard';
-import Data from './db/Data';
-// import data  from './data';
+ import Data from './db/Data';
+ 
 
-
-// https://mui.com/ ==> for UI
-
+ 
 
 function App() {
 
@@ -106,12 +103,7 @@ function App() {
   );
 }
 
-// Click outside
-// https://mui.com/components/click-away-listener/
-
-// Modal
-// https://mui.com/components/modal/#main-content
-
+ 
 
 
 // function ControllCard({ id, keys }) {

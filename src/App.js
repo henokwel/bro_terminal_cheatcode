@@ -9,7 +9,7 @@ import Data from './db/Data';
 
 function App() {
 
-  const [currentId, setCurrentId] = useState(100)
+  const [currentId, setCurrentId] = useState(200)
 
   // useEffect(() => {
   //   window.addEventListener('online', () => {
@@ -42,31 +42,32 @@ function App() {
 
   }
 
+  // Data["200"].map(item => console.log(item))
 
 
   return (
     <div className="App">
       <aside>
 
-        <button>
+        <button onClick={() => handleFilterBtn(100)}>
           100
         </button>
-        <button>
+        <button onClick={() => handleFilterBtn(200)}>
           200
         </button>
-        <button>
+        <button onClick={() => handleFilterBtn(300)}>
           300
         </button>
-        <button>
+        <button onClick={() => handleFilterBtn(400)}>
           400
         </button>
-        <button>
+        <button onClick={() => handleFilterBtn(500)}>
           500
         </button>
-        <button>
+        <button onClick={() => handleFilterBtn(600)}>
           600
         </button>
-        <button>
+        <button onClick={() => handleFilterBtn(700)}>
           700
         </button>
 
@@ -74,7 +75,19 @@ function App() {
 
       <main>
 
-        
+        {
+          Data[currentId].map(item => {
+            const { id, key } = item
+
+            return <div className='controll_Card'>
+              <h3>{id}</h3>
+              <div className='controll_Card_controller'>
+                {key.map(controller => <li>{`${controller < 10 ? `0` + controller : controller}`}</li>)}
+              </div>
+            </div>
+          }
+          )
+        }
 
       </main>
     </div>

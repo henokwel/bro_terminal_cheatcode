@@ -4,10 +4,14 @@ import './index.css';
 import App from './App';
 import { register as registerServiceWorker } from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import ReactPWAInstallProvider from "react-pwa-install";
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ReactPWAInstallProvider enableLogging>
+      <App />
+    </ReactPWAInstallProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

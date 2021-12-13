@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import ReactPWAInstallProvider, { useReactPWAInstall } from "react-pwa-install";
+import Logo from './broLogo.png'
 import './App.css';
 import Data from './db/Data';
 
@@ -8,7 +10,7 @@ import Data from './db/Data';
 function App() {
 
   const [currentId, setCurrentId] = useState(200)
-
+  const { pwaInstall, supported, isInstalled } = useReactPWAInstall();
   // useEffect(() => {
   //   window.addEventListener('online', () => {
   //     console.log('Online')
@@ -30,7 +32,7 @@ function App() {
 
   //  ==> check if user's device
 
-  
+
   // if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
   //   // true for mobile device
   //  console.log("mobile device");
@@ -39,7 +41,24 @@ function App() {
   //  console.log("not mobile device");
   // }
 
-  
+
+  const handleClick = () => {
+    pwaInstall({
+      title: "Install App",
+      logo: Logo,
+      features: (
+        <ul>
+          <li>Display Control Numbers</li>
+          <li>Works offline</li>
+        </ul>
+      ),
+      description: "Get fast access to control number. ",
+    })
+      .then(() => alert("App installed successfully or instructions for install shown"))
+      .catch(() => alert("User opted out from installing"));
+  };
+
+
   const handleFilterBtn = (id) => {
 
     // check if its a new id 
@@ -54,6 +73,12 @@ function App() {
   return (
     <div className="App">
       <aside>
+
+        {supported() && !isInstalled() && (
+          <button type="button" onClick={handleClick}>
+            Install App
+          </button>
+        )}
 
         <button onClick={() => handleFilterBtn(100)}>
           <h2>

@@ -42,6 +42,7 @@ function App() {
   // }
 
 
+
   const handleClick = () => {
     pwaInstall({
       title: "Install App",
@@ -79,6 +80,17 @@ function App() {
             Install App
           </button>
         )}
+
+        <button onClick={() => handleFilterBtn("P1")}>
+          <h2>
+            P1
+          </h2>
+        </button>
+        <button onClick={() => handleFilterBtn("P2")}>
+          <h2>
+            P2
+          </h2>
+        </button>
 
         <button onClick={() => handleFilterBtn(100)}>
           <h2>

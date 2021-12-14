@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import ReactPWAInstallProvider, { useReactPWAInstall } from "react-pwa-install";
+import  { useReactPWAInstall } from "react-pwa-install";
 import Logo from './broLogo.png'
 import './App.css';
-import Data from './db/Data';
-
-
+// import Data from './db/Data';
+import Data2 from './db/data.json'
 
 
 function App() {
@@ -42,6 +41,13 @@ function App() {
   // }
 
 
+  // const data_2 = JSON.parse(Data2)
+  // console.log(data_2);
+  // console.log(Data2);
+
+  // const newJson = JSON.stringify(Data)
+  // console.log(newJson);
+  
 
   const handleClick = () => {
     pwaInstall({
@@ -133,7 +139,7 @@ function App() {
       <main>
 
         {
-          Data[currentId].map((item, index) => {
+          Data2[currentId].map((item, index) => {
             const { id, key } = item
 
             // return <ControllCard id={id}  key={id + 1} keys={key}/>

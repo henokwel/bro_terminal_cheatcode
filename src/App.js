@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import  { useReactPWAInstall } from "react-pwa-install";
+import { useReactPWAInstall } from "react-pwa-install";
 import Logo from './broLogo.png'
 import './App.css';
 // import Data from './db/Data';
@@ -47,7 +47,7 @@ function App() {
 
   // const newJson = JSON.stringify(Data)
   // console.log(newJson);
-  
+
 
   const handleClick = () => {
     pwaInstall({
@@ -82,7 +82,7 @@ function App() {
 
       <main>
         {
-          Data[currentId].map((item, index) => {
+          Data2[currentId].map((item, index) => {
             const { id, key } = item
 
             // return <ControllCard id={id}  key={id + 1} keys={key}/>
@@ -156,25 +156,7 @@ function App() {
 
       </aside>
 
-      <main>
-
-        {
-          Data2[currentId].map((item, index) => {
-            const { id, key } = item
-
-            // return <ControllCard id={id}  key={id + 1} keys={key}/>
-            return <div className='controll_Card' key={index}>
-              <h3>{id}</h3>
-              <div className='controll_Card_controller'>
-                {/* {key.map(controll => <MiniControllerCard item={controll} id={id} />)} */}
-                {key.map((controller, index) => <li key={index}>{`${controller < 10 ? `0` + controller : controller}`}</li>)}
-              </div>
-            </div>
-          }
-          )
-        }
-
-      </main>
+      
     </div>
   );
 }

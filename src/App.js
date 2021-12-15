@@ -72,6 +72,26 @@ function App() {
 
   return (
     <div className="App">
+
+      <main>
+        {
+          Data[currentId].map((item, index) => {
+            const { id, key } = item
+
+            // return <ControllCard id={id}  key={id + 1} keys={key}/>
+            return <div className='controll_Card' key={index}>
+              <h3>{id}</h3>
+              <div className='controll_Card_controller'>
+                {/* {key.map(controll => <MiniControllerCard item={controll} id={id} />)} */}
+                {key.map((controller, index) => <li key={index}>{`${controller < 10 ? `0` + controller : controller}`}</li>)}
+              </div>
+            </div>
+          }
+          )
+        }
+      </main>
+
+
       <aside>
 
         {supported() && !isInstalled() && (
@@ -117,26 +137,6 @@ function App() {
         </button>
 
       </aside>
-
-      <main>
-
-        {
-          Data[currentId].map((item, index) => {
-            const { id, key } = item
-
-            // return <ControllCard id={id}  key={id + 1} keys={key}/>
-            return <div className='controll_Card' key={index}>
-              <h3>{id}</h3>
-              <div className='controll_Card_controller'>
-                {/* {key.map(controll => <MiniControllerCard item={controll} id={id} />)} */}
-                {key.map((controller, index) => <li key={index}>{`${controller < 10 ? `0` + controller : controller}`}</li>)}
-              </div>
-            </div>
-          }
-          )
-        }
-
-      </main>
     </div>
   );
 }

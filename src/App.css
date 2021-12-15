@@ -11,9 +11,8 @@ aside {
   justify-content: flex-end;
   align-items: center;
   height: 100vh;
-  min-width: 24vw;
-  max-width: 30vw;
-  
+  /* min-width: 24vw;
+  max-width: 30vw; */
   background: rgb(0, 0, 0);
   
 }
@@ -23,6 +22,7 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   height: 100vh;
   width: 100%;
   background: rgb(10, 10, 10);
@@ -30,9 +30,6 @@ main {
   overflow-x: hidden;
 
 }
-/*# sourceMappingURL=App.css.map */
-
-
 button {
   width:-moz-available  ;
   

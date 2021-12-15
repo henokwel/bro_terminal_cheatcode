@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import ReactPWAInstallProvider, { useReactPWAInstall } from "react-pwa-install";
+import  { useReactPWAInstall } from "react-pwa-install";
 import Logo from './broLogo.png'
 import './App.css';
-import Data from './db/Data';
-
-
+// import Data from './db/Data';
+import Data2 from './db/data.json'
 
 
 function App() {
@@ -41,6 +40,14 @@ function App() {
   //  console.log("not mobile device");
   // }
 
+
+  // const data_2 = JSON.parse(Data2)
+  // console.log(data_2);
+  // console.log(Data2);
+
+  // const newJson = JSON.stringify(Data)
+  // console.log(newJson);
+  
 
   const handleClick = () => {
     pwaInstall({
@@ -100,6 +107,17 @@ function App() {
           </button>
         )}
 
+        <button onClick={() => handleFilterBtn("P1")}>
+          <h2>
+            P1
+          </h2>
+        </button>
+        <button onClick={() => handleFilterBtn("P2")}>
+          <h2>
+            P2
+          </h2>
+        </button>
+
         <button onClick={() => handleFilterBtn(100)}>
           <h2>
             100
@@ -137,6 +155,26 @@ function App() {
         </button>
 
       </aside>
+
+      <main>
+
+        {
+          Data2[currentId].map((item, index) => {
+            const { id, key } = item
+
+            // return <ControllCard id={id}  key={id + 1} keys={key}/>
+            return <div className='controll_Card' key={index}>
+              <h3>{id}</h3>
+              <div className='controll_Card_controller'>
+                {/* {key.map(controll => <MiniControllerCard item={controll} id={id} />)} */}
+                {key.map((controller, index) => <li key={index}>{`${controller < 10 ? `0` + controller : controller}`}</li>)}
+              </div>
+            </div>
+          }
+          )
+        }
+
+      </main>
     </div>
   );
 }

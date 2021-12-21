@@ -4,6 +4,8 @@ import Logo from './broLogo.png'
 import './App.css';
 // import Data from './db/Data';
 import Data2 from './db/data.json'
+import uniqid from 'uniqid';
+
 
 
 function App() {
@@ -76,7 +78,6 @@ function App() {
 
   // Data["200"].map(item => console.log(item))
 
-
   return (
     <div className="App">
 
@@ -86,11 +87,11 @@ function App() {
             const { id, key } = item
 
             // return <ControllCard id={id}  key={id + 1} keys={key}/>
-            return <div className='controll_Card' key={index}>
+            return <div className='controll_Card' key={uniqid()}>
               <h3>{id}</h3>
               <div className='controll_Card_controller'>
-                {/* {key.map(controll => <MiniControllerCard item={controll} id={id} />)} */}
-                {key.map((controller, index) => <li key={index}>{`${controller < 10 ? `0` + controller : controller}`}</li>)}
+                {key.map((controll) => <MiniControllerCard item={controll} id={id} key={uniqid()} />)}
+                {/* {key.map((controller, index) => <li key={index}>{`${controller < 10 ? `0` + controller : controller}`}</li>)} */}
               </div>
             </div>
           }
@@ -156,7 +157,7 @@ function App() {
 
       </aside>
 
-      
+
     </div>
   );
 }
@@ -170,7 +171,7 @@ function App() {
 //   return (
 //     <div className='controll_Card'>
 //       <h3>{id}</h3>
-//       <MiniControllerCard item={keys} id={id} />
+//       <MiniControllerCard items={keys} id={id} />
 //       {/* <div className='controll_Card_controller'>
 //               {key.map(controller => <li>{`${controller < 10 ? `0` + controller : controller}`}</li>)}
 //           </div> */}
@@ -179,15 +180,10 @@ function App() {
 // }
 
 
-// function MiniControllerCard({ item, id }) {
-//   console.log(item);
-
-//   return (
-//     <div className='controll_Card_controller' key={id}>
-//       {item.map(controller => <li >{`${controller < 10 ? `0` + controller : controller}`}</li>)}
-//     </div>
-//   )
-// }
+function MiniControllerCard(items) {
+  const { item } = items
+  return <li>{`${item < 10 ? `0` + item : item}`}</li>
+}
 
 
 export default App;

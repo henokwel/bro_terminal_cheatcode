@@ -4,6 +4,7 @@ import Logo from './broLogo.png'
 import './App.css';
 // import Data from './db/Data';
 import Data2 from './db/data.json'
+import BtnData from './db/btnData.json'
 import uniqid from 'uniqid';
 
 
@@ -78,6 +79,7 @@ function App() {
 
   // Data["200"].map(item => console.log(item))
 
+
   return (
     <div className="App">
 
@@ -108,6 +110,19 @@ function App() {
           </button>
         )}
 
+
+
+        {
+          BtnData.map((item, index) => {
+            return <button key={index} onClick={() => handleFilterBtn(`${item.name}`)}>
+              <h2>
+                {item.name}
+              </h2>
+            </button>
+          })
+        }
+
+        {/* 
         <button onClick={() => handleFilterBtn("P1")}>
           <h2>
             P1
@@ -153,7 +168,7 @@ function App() {
           <h2>
             700
           </h2>
-        </button>
+        </button> */}
 
       </aside>
 

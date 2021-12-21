@@ -165,24 +165,23 @@ function App() {
 
 
 
-function ControllCard({ id, keys }) {
-  // console.log('Kye ===>>' , key);
+// function ControllCard({ id, keys }) {
+//   // console.log('Kye ===>>' , key);
 
-  return (
-    <div className='controll_Card'>
-      <h3>{id}</h3>
-      <MiniControllerCard items={keys} id={id} />
-      {/* <div className='controll_Card_controller'>
-              {key.map(controller => <li>{`${controller < 10 ? `0` + controller : controller}`}</li>)}
-          </div> */}
-    </div>
-  )
-}
+//   return (
+//     <div className='controll_Card'>
+//       <h3>{id}</h3>
+//       <MiniControllerCard items={keys} id={id} />
+//       {/* <div className='controll_Card_controller'>
+//               {key.map(controller => <li>{`${controller < 10 ? `0` + controller : controller}`}</li>)}
+//           </div> */}
+//     </div>
+//   )
+// }
 
 
 function MiniControllerCard(items) {
-  const { id, item } = items
-
+  const { item } = items
   return <li>{`${item < 10 ? `0` + item : item}`}</li>
 }
 

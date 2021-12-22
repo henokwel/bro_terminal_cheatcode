@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useReactPWAInstall } from "react-pwa-install";
-import Logo from './broLogo.png'
+import Logo from './Assets/broLogo.png'
 import './App.css';
 // import Data from './db/Data';
-import Data2 from './db/data.json'
+import Data from './db/data.json'
 import BtnData from './db/btnData.json'
-import uniqid from 'uniqid';
+import { Card } from './Components/Card';
 
 
 
@@ -44,9 +44,9 @@ function App() {
   // }
 
 
-  // const data_2 = JSON.parse(Data2)
+  // const data_2 = JSON.parse(Data)
   // console.log(data_2);
-  // console.log(Data2);
+  // console.log(Data);
 
   // const newJson = JSON.stringify(Data)
   // console.log(newJson);
@@ -85,32 +85,17 @@ function App() {
 
       <main>
         {
-          Data2[currentId].map((item, index) => {
-            const { id, key } = item
-
-            // return <ControllCard id={id}  key={id + 1} keys={key}/>
-            return <div className='controll_Card' key={uniqid()}>
-              <h3>{id}</h3>
-              <div className='controll_Card_controller'>
-                {key.map((controll) => <MiniControllerCard item={controll} id={id} key={uniqid()} />)}
-                {/* {key.map((controller, index) => <li key={index}>{`${controller < 10 ? `0` + controller : controller}`}</li>)} */}
-              </div>
-            </div>
-          }
-          )
+          Data[currentId].map((item, index) => <Card item={item} key={index} />)
         }
       </main>
 
 
       <aside>
-
         {supported() && !isInstalled() && (
           <button type="button" onClick={handleClick}>
             Install App
           </button>
         )}
-
-
 
         {
           BtnData.map((item, index) => {
@@ -121,83 +106,11 @@ function App() {
             </button>
           })
         }
-
-        {/* 
-        <button onClick={() => handleFilterBtn("P1")}>
-          <h2>
-            P1
-          </h2>
-        </button>
-        <button onClick={() => handleFilterBtn("P2")}>
-          <h2>
-            P2
-          </h2>
-        </button>
-
-        <button onClick={() => handleFilterBtn(100)}>
-          <h2>
-            100
-          </h2>
-        </button>
-        <button onClick={() => handleFilterBtn(200)}>
-          <h2>
-            200
-          </h2>
-        </button>
-        <button onClick={() => handleFilterBtn(300)}>
-          <h2>
-            300
-          </h2>
-        </button>
-        <button onClick={() => handleFilterBtn(400)}>
-          <h2>
-            400
-          </h2>
-        </button>
-        <button onClick={() => handleFilterBtn(500)}>
-          <h2>
-            500
-          </h2>
-        </button>
-        <button onClick={() => handleFilterBtn(600)}>
-          <h2>
-            600
-          </h2>
-        </button>
-        <button onClick={() => handleFilterBtn(700)}>
-          <h2>
-            700
-          </h2>
-        </button> */}
-
       </aside>
 
 
     </div>
   );
-}
-
-
-
-
-// function ControllCard({ id, keys }) {
-//   // console.log('Kye ===>>' , key);
-
-//   return (
-//     <div className='controll_Card'>
-//       <h3>{id}</h3>
-//       <MiniControllerCard items={keys} id={id} />
-//       {/* <div className='controll_Card_controller'>
-//               {key.map(controller => <li>{`${controller < 10 ? `0` + controller : controller}`}</li>)}
-//           </div> */}
-//     </div>
-//   )
-// }
-
-
-function MiniControllerCard(items) {
-  const { item } = items
-  return <li>{`${item < 10 ? `0` + item : item}`}</li>
 }
 
 

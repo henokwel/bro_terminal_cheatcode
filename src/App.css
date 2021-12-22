@@ -50,6 +50,9 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 109px;
+  min-height: 81px;
+  
   margin: 10px;
   padding: 5px;
   background: white;
@@ -67,11 +70,14 @@ button {
 }
 
 .controll_Card_controller li {
+  text-align: center;
+  min-height: 29px;
+  min-width: 29px;
   font-size: 20px;
   font-weight: bold;
   list-style: none;
   margin: 2px;
-  padding: 3px;
+  padding: 2px;
 }
 
 .controll_Card_controller li:nth-child(1) {
